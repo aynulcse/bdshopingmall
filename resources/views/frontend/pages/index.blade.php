@@ -3,7 +3,7 @@
 
 @section('content')
 <div id="loader"></div>
-@include('Frontend.partials.slider')
+@include('frontend.partials.slider')
 
 <div class="container mt-5">
 	<div class="row">
