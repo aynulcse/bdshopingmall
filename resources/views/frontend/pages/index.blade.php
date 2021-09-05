@@ -21,7 +21,7 @@
 
 
 @endsection
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var loader;
 	function load(opacity){
 		if (opacity <= 0) {
@@ -42,4 +42,4 @@
 		loader=document.getElementById('loader');
 		load(1);
 	})
-</script>
+</script> -->
