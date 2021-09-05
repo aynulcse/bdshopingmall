@@ -11,18 +11,18 @@
 |
 */
 // frontend route
-Route::get('/','Frontend\PagesController@index')->name('index');
+Route::get('/','frontend\PagesController@index')->name('index');
 
 
-Route::get('/products','Frontend\PagesController@products')->name('products');
+Route::get('/products','frontend\PagesController@products')->name('products');
 // user token 
-Route::get('/token/{token}','Frontend\VerificationsController@verified')->name('user.verification');
-Route::get('/contacts','Frontend\PagesController@contacts')->name('contact');
-Route::post('/contacts/store','Frontend\PagesController@store')->name('contact.store');
+Route::get('/token/{token}','frontend\VerificationsController@verified')->name('user.verification');
+Route::get('/contacts','frontend\PagesController@contacts')->name('contact');
+Route::post('/contacts/store','frontend\PagesController@store')->name('contact.store');
 
-Route::get('/product/{id}','Frontend\PagesController@product_show')->name('product.show');
-Route::get('/product/category/{id}','Frontend\PagesController@Category')->name('product.category');
-Route::get('/search','Frontend\PagesController@search')->name('search');
+Route::get('/product/{id}','frontend\PagesController@product_show')->name('product.show');
+Route::get('/product/category/{id}','frontend\PagesController@Category')->name('product.category');
+Route::get('/search','frontend\PagesController@search')->name('search');
 
 
 
@@ -33,77 +33,77 @@ Route::get('/search','Frontend\PagesController@search')->name('search');
 
 
 Route::group(['prefix'=>'admin'],function(){
-	Route::get('/','Backend\PagesController@index')->name('admin.dashboard');
+	Route::get('/','backend\PagesController@index')->name('admin.dashboard');
 	
 	//product route
-	 Route::get('/product','Backend\ProductsController@index')->name('admin.product.index');
-	 Route::post('/product/store','Backend\ProductsController@store');
-	 Route::get('/product/edit/{id}','Backend\ProductsController@edit');
-	 Route::post('/product/update','Backend\ProductsController@update');
-	 Route::get('/product/delete/{id}','Backend\ProductsController@destroy');
-	 Route::get('/product/block/{id}','Backend\ProductsController@Block');
-	 Route::get('/product/subcategory/{id}','Backend\ProductsController@SubCategory');
+	 Route::get('/product','backend\ProductsController@index')->name('admin.product.index');
+	 Route::post('/product/store','backend\ProductsController@store');
+	 Route::get('/product/edit/{id}','backend\ProductsController@edit');
+	 Route::post('/product/update','backend\ProductsController@update');
+	 Route::get('/product/delete/{id}','backend\ProductsController@destroy');
+	 Route::get('/product/block/{id}','backend\ProductsController@Block');
+	 Route::get('/product/subcategory/{id}','backend\ProductsController@SubCategory');
 
 
 
 
 	//category route
-	 Route::get('category/','Backend\CategoryController@index')->name('admin.category.index');
-	 Route::post('/category/store','Backend\CategoryController@store');
-	 Route::get('/category/edit/{id}','Backend\CategoryController@edit');
-	 Route::post('/category/update','Backend\CategoryController@update');
-	 Route::get('/category/delete/{id}','Backend\CategoryController@destroy');
+	 Route::get('category/','backend\CategoryController@index')->name('admin.category.index');
+	 Route::post('/category/store','backend\CategoryController@store');
+	 Route::get('/category/edit/{id}','backend\CategoryController@edit');
+	 Route::post('/category/update','backend\CategoryController@update');
+	 Route::get('/category/delete/{id}','backend\CategoryController@destroy');
 
 	 //Subcategory route
-	 Route::get('/subcategory/','Backend\SubCategoryController@index')->name('admin.subcategory.index');
-	 Route::post('/subcategory/store','Backend\SubCategoryController@store');
-	 Route::get('/subcategory/edit/{id}','Backend\SubCategoryController@edit');
-	 Route::post('/subcategory/update','Backend\SubCategoryController@update');
-	 Route::get('/subcategory/delete/{id}','Backend\SubCategoryController@destroy');
+	 Route::get('/subcategory/','backend\SubCategoryController@index')->name('admin.subcategory.index');
+	 Route::post('/subcategory/store','backend\SubCategoryController@store');
+	 Route::get('/subcategory/edit/{id}','backend\SubCategoryController@edit');
+	 Route::post('/subcategory/update','backend\SubCategoryController@update');
+	 Route::get('/subcategory/delete/{id}','backend\SubCategoryController@destroy');
 	
 
 
 
 
 	//divisions route
-	 Route::get('district/','Backend\DistrictController@index')->name('admin.district.index');
-	 Route::get('district/create','Backend\DistrictController@create');
-	 Route::post('district/store','Backend\DistrictController@store');
-	 Route::get('district/edit/{id}','Backend\DistrictController@edit');
-	 Route::post('district/update','Backend\DistrictController@update');
-	 Route::get('district/delete/{id}','Backend\DistrictController@destroy');
+	 Route::get('district/','backend\DistrictController@index')->name('admin.district.index');
+	 Route::get('district/create','backend\DistrictController@create');
+	 Route::post('district/store','backend\DistrictController@store');
+	 Route::get('district/edit/{id}','backend\DistrictController@edit');
+	 Route::post('district/update','backend\DistrictController@update');
+	 Route::get('district/delete/{id}','backend\DistrictController@destroy');
 	
 	//Thanas route
-	 Route::get('thana/','Backend\ThanaController@index')->name('admin.thana.index');
-	 Route::get('thana/create','Backend\ThanaController@create');
-	 Route::post('thana/store','Backend\ThanaController@store');
-	 Route::get('thana/edit/{id}','Backend\ThanaController@edit');
-	 Route::post('thana/update','Backend\ThanaController@update');
-	 Route::get('thana/delete/{id}','Backend\ThanaController@destroy');
+	 Route::get('thana/','backend\ThanaController@index')->name('admin.thana.index');
+	 Route::get('thana/create','backend\ThanaController@create');
+	 Route::post('thana/store','backend\ThanaController@store');
+	 Route::get('thana/edit/{id}','backend\ThanaController@edit');
+	 Route::post('thana/update','backend\ThanaController@update');
+	 Route::get('thana/delete/{id}','backend\ThanaController@destroy');
 	
 
 
 	//Slider route
-	 Route::get('slider/','Backend\SliderController@index')->name('admin.slider.index');
-	  Route::post('slider/store','Backend\SliderController@store');
-	 Route::get('slider/edit/{id}','Backend\SliderController@edit');
-	 Route::post('slider/update','Backend\SliderController@update');
-	 Route::get('slider/delete/{id}','Backend\SliderController@destroy');
+	 Route::get('slider/','backend\SliderController@index')->name('admin.slider.index');
+	  Route::post('slider/store','backend\SliderController@store');
+	 Route::get('slider/edit/{id}','backend\SliderController@edit');
+	 Route::post('slider/update','backend\SliderController@update');
+	 Route::get('slider/delete/{id}','backend\SliderController@destroy');
 
 
 
 	//Orders route
-	 Route::get('order/','Backend\OrdersController@index')->name('admin.order.index');
-	 Route::get('order/delete/{id}','Backend\OrdersController@destroy');
-	 Route::get('order/seen/{id}','Backend\OrdersController@Seen');
-	 Route::get('order/paid/{id}','Backend\OrdersController@Paid');
-	 Route::get('order/complete/{id}','Backend\OrdersController@Complete');
-	 Route::get('order/cancel/{id}','Backend\OrdersController@Cancel');
-	 Route::get('order/view/{id}','Backend\OrdersController@View')->name('view.order');
+	 Route::get('order/','backend\OrdersController@index')->name('admin.order.index');
+	 Route::get('order/delete/{id}','backend\OrdersController@destroy');
+	 Route::get('order/seen/{id}','backend\OrdersController@Seen');
+	 Route::get('order/paid/{id}','backend\OrdersController@Paid');
+	 Route::get('order/complete/{id}','backend\OrdersController@Complete');
+	 Route::get('order/cancel/{id}','backend\OrdersController@Cancel');
+	 Route::get('order/view/{id}','backend\OrdersController@View')->name('view.order');
 
 
-	 Route::get('/contact','Backend\PagesController@Contact')->name('admin.contact');
-	 Route::get('contact/delete/{id}','Backend\PagesController@destroy');
+	 Route::get('/contact','backend\PagesController@Contact')->name('admin.contact');
+	 Route::get('contact/delete/{id}','backend\PagesController@destroy');
 	
 	
 });
