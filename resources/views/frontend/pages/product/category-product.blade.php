@@ -4,7 +4,7 @@
 <div class="container mt-5">
 	<div class="row bg-light">
 		<div class="col-md-3">
-			@include('Frontend.partials.left-side')
+			@include('frontend.partials.left-side')
 		</div>
 	<div class="col-md-9">
 			<div class="widget">

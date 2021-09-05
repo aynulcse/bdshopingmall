@@ -3,13 +3,13 @@
 	<meta charset="utf-8">
 	<meta name="csrf-token" content="{{csrf_token()}}">
 <!-- style start -->
-	@include('Frontend.partials.styles')
+	@include('frontend.partials.styles')
 <!-- styles end -->
 </head>
 <body>
 <div class="waraper">
 <!-- start nav -->
-	@include('Frontend.partials.nav')
+	@include('frontend.partials.nav')
 	@include('backend.partials.message')
 <!-- end of nav -->
 
@@ -21,11 +21,11 @@
 
 </div>
 <!-- fotter -->
-	@include('Frontend.partials.fotter')	
+	@include('frontend.partials.fotter')	
 <!-- fotter end -->
 
 <!-- script start -->
-	@include('Frontend.partials.script')
+	@include('frontend.partials.script')
 	@yield('script')
 <!-- script end -->
 </body>
