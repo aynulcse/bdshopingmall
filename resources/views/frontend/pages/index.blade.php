@@ -21,25 +21,3 @@
 
 
 @endsection
-<!-- <script type="text/javascript">
-	var loader;
-	function load(opacity){
-		if (opacity <= 0) {
-			displayContent();
-		}
-		else{
-			loader.style.opacity=opacity;
-			window.setTimeout(function(){
-				load(opacity - 0.05)
-			},100);
-		}
-	} 
-	function displayContent(){
-		loader.style.display='none';
-		document.getElementById('content').style.display='block';
-	}
-	document.addEventListener("DOMContentLoaded",function(){
-		loader=document.getElementById('loader');
-		load(1);
-	})
-</script> -->
