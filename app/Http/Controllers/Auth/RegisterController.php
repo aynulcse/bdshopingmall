@@ -101,7 +101,7 @@ class RegisterController extends Controller
 
     } 
     public function reg(){
-        return view('Auth.regadmin');
+        return view('auth.regadmin');
     }
     protected function regadmin(Request $request)
     {
