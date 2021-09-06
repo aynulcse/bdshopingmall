@@ -105,7 +105,7 @@ class RegisterController extends Controller
     }
     protected function regadmin(Request $request)
     {
-        dd();
+        dd($request);
        // $user=new Admin();
        // $user->name = $request->name;
        // $user->email= $request->email;
