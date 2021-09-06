@@ -76,6 +76,11 @@
                               <div class="recover-pass">
                                 <button type="submit" class="btn btn-primary">Login </button>
                               </div>
+                              <div class="login-btn">
+                                <button class="btn btn-outline-primary">
+                                <a href="{{ route('reg') }}" class="text-decoration-none">Register</a>
+                                </button>
+                              </div>
                             </div>
                             <hr class="m-0">
                           </div>
