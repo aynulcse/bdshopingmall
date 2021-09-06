@@ -50,10 +50,13 @@
 
                             <div class="col-md-6">
                                <select class="form-control" name="district_id" id="district_id">
-                                  <option>Please select District</option>
-                                  @foreach($districts as $district) 
-                                  <option value="{{ $district->id }}">{{ $district->name }}</option>
-                                  @endforeach
+                                  <option>Please select District</option
+                                  <option value="1">Dhaka</option>
+                                  <option value="2">Panchagarh</option>
+                                 <option value="3">Kurigram</option>
+                                 <option value="4">Rangpur</option>
+                                 <option value="5">Khulna</option>
+                                 <option value="6">Bogura</option>
                                </select>
                             </div>
                         </div>
@@ -61,9 +64,14 @@
                             <label class="col-md-4 col-form-label text-md-right">Thana</label>
 
                             <div class="col-md-6">
-                               <select class="form-control" name="thana" id="thana_id">
-                                  
-                                  
+                               <select class="form-control" name="thana" >
+                                  <option>Please select District</option
+                                  <option value="1">Motijheel</option>
+                                  <option value="2">Tetulia</option>
+                                 <option value="3">Kurigram Sadar</option>
+                                 <option value="4">Sadar</option>
+                                 <option value="5">Khulna Sadar</option>
+                                 <option value="6">Bogura Sibgong</option>
                                </select>
                             </div>
                         </div>
