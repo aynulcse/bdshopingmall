@@ -144,5 +144,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/register/thana/{id}','Auth\RegisterController@Thana');
 Route::get('/update/thana/{id}','frontend\UsersController@Thana');
 
+Route::get('/reg','Auth\RegisterController@reg')->name('reg');
 Route::post('/regadmin','Auth\RegisterController@regadmin')->name('regadmin');
 
