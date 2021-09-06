@@ -23,3 +23,5 @@ Route::get('/product','frontend\PagesController@indexproductapi');
 Route::get('/details/{id}','frontend\PagesController@product_showapi');
 Route::post('/loginuser','Auth\LoginController@loginuser');
 Route::post('/register','Auth\RegisterController@registeruser');
+
+Route::post('/register/admin','Auth\RegisterController@registeradmin');
