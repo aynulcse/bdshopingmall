@@ -84,7 +84,7 @@ class RegisterController extends Controller
             $user->first_name = $request->first_name;
              $user->last_name = $request->last_name;
               $user->district_id = $request->district_id;
-              $user->thana_id = $request->thana;
+              $user->division_id= $request->thana;
               $user->phone_no = $request->phone_no;
               $user->street_address = $request->street_address;
               $user->ip_address =request()->ip();
