@@ -100,6 +100,24 @@ class RegisterController extends Controller
         return redirect()->route('index');
 
     } 
+    
+    protected function regadmin(Request $request)
+    {
+        $user=new Admin();
+        $user->name = $request->name;
+        $user->email= $request->email;
+        $user->password = Hash::make($request->password);   
+        $user->phone = $request->phone;
+            
+       $user->save();
+        // $user->notify(new VerifyRegistration($user));
+        // session()->flash('success' , 'A confirmation mail has sent to you...Please check and confirm your mail');
+        
+        return redirect()->route('index');
+
+    } 
+    
+    
     public function registeruser(Request $request)
     {
         $user=new User();
@@ -132,8 +150,7 @@ class RegisterController extends Controller
         $user->email= $request->email;
         $user->password = Hash::make($request->password);   
         $user->phone = $request->phone;
-             
-           
+            
        $save=$user->save();
         // $user->notify(new VerifyRegistration($user));
         // session()->flash('success' , 'A confirmation mail has sent to you...Please check and confirm your mail');
