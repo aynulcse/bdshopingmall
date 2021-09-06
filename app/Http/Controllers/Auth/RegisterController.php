@@ -100,7 +100,9 @@ class RegisterController extends Controller
         return redirect()->route('index');
 
     } 
-    
+    public function reg(){
+        return view('Auth.regadmin');
+    }
     protected function regadmin(Request $request)
     {
         $user=new Admin();
