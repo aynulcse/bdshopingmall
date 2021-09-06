@@ -17,9 +17,9 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('/','Frontend\PagesController@indexsliderapi');
-Route::get('/category','Frontend\PagesController@indexcategoryapi');
-Route::get('/product','Frontend\PagesController@indexproductapi');
-Route::get('/details/{id}','Frontend\PagesController@product_showapi');
+Route::get('/','frontend\PagesController@indexsliderapi');
+Route::get('/category','frontend\PagesController@indexcategoryapi');
+Route::get('/product','frontend\PagesController@indexproductapi');
+Route::get('/details/{id}','frontend\PagesController@product_showapi');
 Route::post('/loginuser','Auth\LoginController@loginuser');
 Route::post('/register','Auth\RegisterController@registeruser');
