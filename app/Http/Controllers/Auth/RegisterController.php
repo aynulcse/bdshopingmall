@@ -14,6 +14,7 @@ use Auth;
 use File;
 Use Image;
 use App\Models\Thana;
+use App\Models\Admin;
 use App\Notifications\VerifyRegistration;
 class RegisterController extends Controller
 {
@@ -123,6 +124,26 @@ class RegisterController extends Controller
         return Response()->json(["Message"=>"Failed","statusCode"=>"201"]);;
 
     }
+    
+    public function registeradmin(Request $request)
+    {
+        $user=new Admin();
+        $user->name = $request->name;
+        $user->email= $request->email;
+        $user->password = Hash::make($request->password);   
+        $user->phone = $request->phone;
+             
+           
+       $save=$user->save();
+        // $user->notify(new VerifyRegistration($user));
+        // session()->flash('success' , 'A confirmation mail has sent to you...Please check and confirm your mail');
+        if($save){
+            return Response()->json(["Message"=>"Successfully","statusCode"=>"200"]);
+        }
+        return Response()->json(["Message"=>"Failed","statusCode"=>"201"]);;
+
+    }
+    
 
     // sdelect auto
     public function Thana($id)
